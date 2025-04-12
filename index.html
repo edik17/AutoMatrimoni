@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto per matrimoni - Prenotazione Auto d'Epoca</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+         :root {
+            --primary-color: #f35e5e; /* Rosa pastello, delicato e elegante */
+            --accent-color: #ea8599; /* Rosa chiaro, accento romantico */
+            --dark-color: #3e3e3e; /* Grigio scuro per il testo */
+            --light-color: #fdf7f4; /* Bianco caldo, fresco e accogliente */
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+        }
+
+        .navbar-custom {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: white;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/800') center/cover no-repeat;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .car-card {
+            border: none;
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .car-title {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .car-year {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: scale(1.05);
+        }
+
+        .form-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            position: relative;
+            color: var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .social-icons {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--accent-color);
+            transition: color 0.3s ease;
+        }
+
+        .social-icons:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .form-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-car-side me-2"></i>Auto per Matrimoni
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nostra-flotta">La Nostra Flotta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prenota">Prenota</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contatti">Contatti</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <h1 class="hero-title">Auto d'Epoca di Classe</h1>
+            <p class="subtitle">Vivi un'esperienza indimenticabile alla guida di un pezzo di storia automobilistica</p>
+            <a href="#prenota" class="btn btn-custom btn-lg">Prenota Ora</a>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section class="py-5" id="nostra-flotta">
+        <div class="container">
+            <h2 class="section-title text-center">La Nostra Flotta</h2>
+            <div class="row">
+                <!-- Car 1 -->
+                <div class="col-md-4">
+                    <div class="card car-card">
+                        <img src="AutoMatrimoni/img/20240629_172556.jpg" class="card-img-top" alt="Maggiolino Bianco">
+                        <div class="card-body text-center">
+                            <h4 class="car-title">Maggiolino Bianco</h4>
+                            <p class="car-year">1975</p>
+                            <p class="card-text">Il Maggiolino Bianco è una vera icona del design automobilistico degli
+                                anni '70. Con la sua forma rotonda, le linee semplici ma eleganti e il motore che ha
+                                fatto storia, il Maggiolino ha conquistato il cuore di milioni di persone in tutto il
+                                mondo. Questo esemplare del 1975 è stato restaurato con cura per mantenere intatto il
+                                fascino vintage, offrendo un'esperienza di guida unica e nostalgica. Perfetto per un
+                                matrimonio, un evento speciale o semplicemente per vivere un pezzo di storia su quattro
+                                ruote.</p>
+                            <a href="#prenota" class="btn btn-custom"
+                                onclick="selectCar('Maggiolino Bianco')">Prenota</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car 2 -->
+                <div class="col-md-4">
+                    <div class="card car-card">
+                        <img src="AutoMatrimoni/img/IMG20220604203505.jpg" class="card-img-top" alt="Maggiolino Nero">
+                        <div class="card-body text-center">
+                            <h4 class="car-title">Maggiolino Nero</h4>
+                            <p class="car-year">1971</p>
+                            <p class="card-text">Il Maggiolino Nero del 1971 è una delle versioni più amate di questa
+                                leggendaria vettura che ha segnato un'epoca. Con il suo motore robusto e il design
+                                inconfondibile, è stato protagonista della motorizzazione di milioni di italiani e di
+                                tanti momenti speciali. Questo esemplare è stato restaurato per mantenere intatto il suo
+                                fascino vintage, perfetto per chi cerca un'esperienza di guida romantica e senza tempo.
+                                Un'auto elegante e storica, ideale per aggiungere un tocco di classe al tuo matrimonio o
+                                evento esclusivo.</p>
+                            <a href="#prenota" class="btn btn-custom" onclick="selectCar('Maggiolino Nero')">Prenota</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="py-5 bg-light" id="prenota">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-section">
+                        <h2 class="section-title">Prenota La Tua Auto d'Epoca</h2>
+                        <form id="bookingForm">
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="cognome" class="form-label">Cognome</label>
+                                    <input type="text" class="form-control" id="cognome" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Numero di Telefono</label>
+                                <input type="tel" class="form-control" id="telefono" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="auto" class="form-label">Scegli un'Auto</label>
+                                <select class="form-select" id="auto" required>
+                                    <option value="">Seleziona un'auto</option>
+                                    <option value="Maggiolino Bianco">Maggiolino Bianco(1975)</option>
+                                    <option value="Maggiolino Nero">Maggiolino Nero (1971)</option>
+
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="data" class="form-label">Data della Prenotazione</label>
+                                <input type="date" class="form-control" id="data" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="messaggio" class="form-label">Messaggio (opzionale)</label>
+                                <textarea class="form-control" id="messaggio" rows="3"></textarea>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-custom btn-lg">Invia Richiesta</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5" id="contatti">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title text-center">Contattaci</h2>
+                    <p class="mb-5">Per qualsiasi informazione, non esitare a contattarci utilizzando uno dei seguenti
+                        metodi:</p>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fas fa-map-marker-alt fa-3x mb-3" style="color: var(--primary-color);"></i>
+                                <h5>Indirizzo</h5>
+                                <p>Via Roma 123, Milano</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fas fa-phone fa-3x mb-3" style="color: var(--primary-color);"></i>
+                                <h5>Telefono</h5>
+                                <p>+39 3332831013</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fas fa-envelope fa-3x mb-3" style="color: var(--primary-color);"></i>
+                                <h5>Email</h5>
+                                <p>giordano.dottori@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h4 class="mb-4">Vintage Wheels</h4>
+                    <p>Specializzati nel noleggio di auto d'epoca restaurate con cura e mantenute in perfette condizioni
+                        per offrire un'esperienza di guida indimenticabile.</p>
+                </div>
+
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="mb-4">Link Rapidi</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#nostra-flotta" class="text-white text-decoration-none">La Nostra
+                                Flotta</a></li>
+                        <li class="mb-2"><a href="#prenota" class="text-white text-decoration-none">Prenota</a></li>
+                        <li><a href="#contatti" class="text-white text-decoration-none">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 class="mb-4">Seguici</h5>
+                    <div>
+                        <a href="#" class="social-icons"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icons"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icons"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mt-4 mb-4" style="background-color: var(--accent-color);">
+
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Vintage Wheels. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to select car in dropdown when clicking "Prenota" on car card
+        function selectCar(carName) {
+            document.getElementById('auto').value = carName;
+            // Smooth scroll to booking form
+            document.getElementById('prenota').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form submission to WhatsApp
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const nome = document.getElementById('nome').value;
+            const cognome = document.getElementById('cognome').value;
+            const telefono = document.getElementById('telefono').value;
+            const auto = document.getElementById('auto').value;
+            const data = document.getElementById('data').value;
+            const messaggio = document.getElementById('messaggio').value;
+
+            // Create the message for WhatsApp
+            let whatsappMessage = `*Nuova Prenotazione Auto d'Epoca*%0A%0A`;
+            whatsappMessage += `*Nome:* ${nome} ${cognome}%0A`;
+            whatsappMessage += `*Telefono:* ${telefono}%0A`;
+            whatsappMessage += `*Auto:* ${auto}%0A`;
+            whatsappMessage += `*Data:* ${data}%0A`;
+
+            if (messaggio) {
+                whatsappMessage += `*Messaggio:* ${messaggio}%0A`;
+            }
+
+            // Replace with your WhatsApp number
+            const whatsappNumber = '3332831013'; // Format: country code + number without +
+
+            // Create WhatsApp URL
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
+
+            // Reset form after submission
+            document.getElementById('bookingForm').reset();
+
+            // Show success message
+            alert('Grazie per la tua prenotazione! Sarai reindirizzato a WhatsApp per inviarci il messaggio.');
+        });
+    </script>
+</body>
+
+</html>
