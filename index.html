@@ -140,7 +140,6 @@
             /* Fa sì che le immagini si adattino senza distorsioni */
         }
 
-
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -196,136 +195,189 @@
         <div class="container">
             <h2 class="section-title text-center">La Nostra Flotta</h2>
             <div class="row">
-                <!-- Car 1 -->
+                <!-- Maggiolino Bianco -->
                 <div class="col-md-4">
                     <div class="card car-card">
-                        <!-- Carosello delle immagini -->
                         <div id="maggiolinoBiancoCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="img/20240629_172556.jpg" class="d-block w-100" alt="Maggiolino Bianco">
+                                    <img src="img/20240629_172556.jpg" class="d-block w-100" alt="Maggiolino Bianco"
+                                        data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/20240629_172556.jpg')">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="img/maggiolino2.jpg" class="d-block w-100" alt="Maggiolino Bianco 2">
+                                    <img src="img/maggiolino2.jpg" class="d-block w-100" alt="Maggiolino Bianco 2"
+                                        data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/maggiolino2.jpg')">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="img/maggiolino3.jpg" class="d-block w-100" alt="Maggiolino Bianco 3">
+                                    <img src="img/maggiolino3.jpg" class="d-block w-100"
+                                        alt="Maggiolino Bianco 3 data-bs-toggle=" modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/maggiolino3.jpg')">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button"
                                 data-bs-target="#maggiolinoBiancoCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
                             </button>
                             <button class="carousel-control-next" type="button"
                                 data-bs-target="#maggiolinoBiancoCarousel" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        <!-- End Carosello -->
-
                         <div class="card-body text-center">
                             <h4 class="car-title">Maggiolino Bianco</h4>
                             <p class="car-year">1975</p>
                             <p class="card-text">Il Maggiolino Bianco è una vera icona del design automobilistico degli
-                                anni '70. Con la sua forma rotonda, le linee semplici ma eleganti e il motore che ha
-                                fatto storia, il Maggiolino ha conquistato il cuore di milioni di persone in tutto il
-                                mondo. Questo esemplare del 1975 è stato restaurato con cura per mantenere intatto il
-                                fascino vintage, offrendo un'esperienza di guida unica e nostalgica. Perfetto per un
-                                matrimonio, un evento speciale o semplicemente per vivere un pezzo di storia su quattro
-                                ruote.</p>
+                                anni '70</p>
                             <a href="#prenota" class="btn btn-custom"
                                 onclick="selectCar('Maggiolino Bianco')">Prenota</a>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Car 2 -->
-            <div class="col-md-4">
-                <div class="card car-card">
-                    <!-- Carosello delle immagini per il Maggiolino Nero -->
-                    <div id="maggiolinoNeroCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/IMG20220604203505.jpg" class="d-block w-100" alt="Maggiolino Nero">
+                <!-- Modal per immagini ingrandite -->
+                <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
-                            <div class="carousel-item">
-                                <img src="img/maggiolinoNero2.jpg" class="d-block w-100" alt="Maggiolino Nero 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/maggiolinoNero3.jpg" class="d-block w-100" alt="Maggiolino Nero 3">
+                            <div class="modal-body">
+                                <img src="" id="modalImage" class="img-fluid" alt="Immagine">
                             </div>
                         </div>
-                        <!-- Controlli del carosello -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#maggiolinoNeroCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#maggiolinoNeroCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
-                    <!-- Fine Carosello -->
+                </div>
 
-                    <div class="card-body text-center">
-                        <h4 class="car-title">Maggiolino Nero</h4>
-                        <p class="car-year">1971</p>
-                        <p class="card-text">Il Maggiolino Nero del 1971 è una delle versioni più amate di questa
-                            leggendaria vettura che ha segnato un'epoca. Con il suo motore robusto e il design
-                            inconfondibile, è stato protagonista della motorizzazione di milioni di italiani e di tanti
-                            momenti speciali. Questo esemplare è stato restaurato per mantenere intatto il suo fascino
-                            vintage, perfetto per chi cerca un'esperienza di guida romantica e senza tempo. Un'auto
-                            elegante e storica, ideale per aggiungere un tocco di classe al tuo matrimonio o evento
-                            esclusivo.</p>
-                        <a href="#prenota" class="btn btn-custom" onclick="selectCar('Maggiolino Nero')">Prenota</a>
+                <!-- Funzione per aprire l'immagine nel modal -->
+                <script>
+                    function openImage(imageUrl) {
+                        document.getElementById('modalImage').src = imageUrl;
+                    }
+                </script>
+
+                <!-- Maggiolino Nero -->
+                <div class="col-md-4">
+                    <div class="card car-card">
+                        <div id="maggiolinoNeroCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/IMG20220604203505.jpg" class="d-block w-100" alt="Maggiolino Nero"
+                                        data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/IMG20220604203505.jpg')">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/maggiolinoNero2.jpg" class="d-block w-100"
+                                        alt="Maggiolino Nero 2 data-bs-toggle=" modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/maggiolinoNero2.jpg')">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/maggiolinoNero3.jpg" class="d-block w-100"
+                                        alt="Maggiolino Nero 3 data-bs-toggle=" modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/maggiolinoNero3.jpg')">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#maggiolinoNeroCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#maggiolinoNeroCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="car-title">Maggiolino Nero</h4>
+                            <p class="car-year">1971</p>
+                            <p class="card-text">Il Maggiolino Nero del 1971 è una delle versioni più amate di questa
+                                leggendaria vettura...</p>
+                            <a href="#prenota" class="btn btn-custom" onclick="selectCar('Maggiolino Nero')">Prenota</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Citroën 2CV -->
+                <div class="col-md-4">
+                    <div class="card car-card">
+                        <div id="citroen2cvCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/citroen2cv1.jpg" class="d-block w-100" alt="Citroen 2CV 1"
+                                        data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/citroen2cv1.jpg')">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/citroen2cv2.jpg" class="d-block w-100"
+                                        alt="Citroen 2CV 2 data-bs-toggle=" modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/citroen2cv2.jpg')">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/citroen2cv3.jpg" class="d-block w-100"
+                                        alt="Citroen 2CV 3 data-bs-toggle=" modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/citroen2cv3.jpg')">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#citroen2cvCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#citroen2cvCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="car-title">Citroën 2CV</h4>
+                            <p class="car-year">1970</p>
+                            <p class="card-text">Il Citroën 2CV è una delle auto più iconiche e amate della storia
+                                automobilistica francese...</p>
+                            <a href="#prenota" class="btn btn-custom" onclick="selectCar('Citroën 2CV')">Prenota</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fiat Talento 9 posti -->
+                <div class="col-md-4">
+                    <div class="card car-card">
+                        <div id="fiatTalentoCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/fiattalento1.jpg" class="d-block w-100" alt="Fiat Talento 1"
+                                        data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/fiattalento1.jpg')">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/fiattalento2.jpg" class="d-block w-100" alt="Fiat Talento 2"
+                                        data-bs-toggle=" modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/fiattalento2.jpg')">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/fiattalento3.jpg" class="d-block w-100" alt="Fiat Talento 3"
+                                        data-bs-toggle=" modal" data-bs-target="#imageModal"
+                                        onclick="openImage('img/fiattalento3.jpg')">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#fiatTalentoCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#fiatTalentoCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="car-title">Fiat Talento 9 posti</h4>
+                            <p class="card-text">Un comodo pulmino Fiat Talento 9 posti, ideale per gruppi o per
+                                accompagnare gli invitati al matrimonio.</p>
+                            <a href="#prenota" class="btn btn-custom"
+                                onclick="selectCar('Fiat Talento 9 posti')">Prenota</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Car 3-->
-        <div class="col-md-4">
-            <div class="card car-card">
-                <!-- Carosello delle immagini per il Pulmino -->
-                <div id="maggiolinoNeroCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/pulmino.jpg" class="d-block w-100" alt="pulmino Nero">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/maggiolinoNero2.jpg" class="d-block w-100" alt="Maggiolino Nero 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/maggiolinoNero3.jpg" class="d-block w-100" alt="Maggiolino Nero 3">
-                        </div>
-                    </div>
-                    <!-- Controlli del carosello -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#maggiolinoNeroCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#maggiolinoNeroCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <!-- Fine Carosello -->
-
-                <div class="card-body text-center">
-                    <h4 class="car-title">Fiat Talento</h4>
-                    <p class="card-text">Pulmino 8 posti comodo per addio al celibato, nubilita oppure accompagnare gli
-                        invitati alla propria festa di matrimonio.</p>
-                    <a href="#prenota" class="btn btn-custom" onclick="selectCar('Pulmino')">Prenota</a>
-                </div>
-            </div>
-        </div>
-        </div>
         </div>
     </section>
 
@@ -359,7 +411,8 @@
                                     <option value="">Seleziona un'auto</option>
                                     <option value="Maggiolino Bianco">Maggiolino Bianco(1975)</option>
                                     <option value="Maggiolino Nero">Maggiolino Nero (1971)</option>
-                                    <option value="Pulmino">Pulmino 8 Posti</option>
+                                    <option value="Citroën 2CV">Citroën 2CV</option>
+                                    <option value="Fiat Talento 9 posti">Fiat Talento 9 Posti</option>
                                 </select>
                             </div>
 
@@ -446,9 +499,9 @@
                 <div class="col-md-3">
                     <h5 class="mb-4">Seguici</h5>
                     <div>
-                        <a href="#https://www.facebook.com/jarad.dottori" class="social-icons"><i
+                        <a href="https://www.facebook.com/jarad.dottori" class="social-icons"><i
                                 class="fab fa-facebook-f"></i></a>
-                        <a href="#https://www.instagram.com/maggiolino_wedding/" class="social-icons"><i
+                        <a href="https://www.instagram.com/maggiolino_wedding/" class="social-icons"><i
                                 class="fab fa-instagram"></i></a>
                     </div>
                 </div>
@@ -463,53 +516,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Function to select car in dropdown when clicking "Prenota" on car card
-        function selectCar(carName) {
-            document.getElementById('auto').value = carName;
-            // Smooth scroll to booking form
-            document.getElementById('prenota').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Form submission to WhatsApp
-        document.getElementById('bookingForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Get form values
-            const nome = document.getElementById('nome').value;
-            const cognome = document.getElementById('cognome').value;
-            const telefono = document.getElementById('telefono').value;
-            const auto = document.getElementById('auto').value;
-            const data = document.getElementById('data').value;
-            const messaggio = document.getElementById('messaggio').value;
-
-            // Create the message for WhatsApp
-            let whatsappMessage = `*Nuova Prenotazione Auto d'Epoca*%0A%0A`;
-            whatsappMessage += `*Nome:* ${nome} ${cognome}%0A`;
-            whatsappMessage += `*Telefono:* ${telefono}%0A`;
-            whatsappMessage += `*Auto:* ${auto}%0A`;
-            whatsappMessage += `*Data:* ${data}%0A`;
-
-            if (messaggio) {
-                whatsappMessage += `*Messaggio:* ${messaggio}%0A`;
-            }
-
-            // Replace with your WhatsApp number
-            const whatsappNumber = '3332831013'; // Format: country code + number without +
-
-            // Create WhatsApp URL
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-
-            // Open WhatsApp in a new tab
-            window.open(whatsappUrl, '_blank');
-
-            // Reset form after submission
-            document.getElementById('bookingForm').reset();
-
-            // Show success message
-            alert('Grazie per la tua prenotazione! Sarai reindirizzato a WhatsApp per inviarci il messaggio.');
-        });
-    </script>
 </body>
 
 </html>
