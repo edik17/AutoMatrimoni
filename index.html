@@ -9,10 +9,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #8b0000;
+            --primary-color: #b88a4d;
+            /* Oro antico */
             --accent-color: #d4af37;
-            --dark-color: #222;
-            --light-color: #f8f9fa;
+            /* Oro chiaro */
+            --dark-color: #2d2d2d;
+            /* Grigio scuro elegante */
+            --light-color: #f4f1e1;
+            /* Crema chiaro per lo sfondo */
         }
 
         body {
@@ -187,13 +191,19 @@
                 <!-- Car 1 -->
                 <div class="col-md-4">
                     <div class="card car-card">
-                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Alfa Romeo Spider">
+                        <img src="AutoMatrimoni/img/20240629_172556.jpg" class="card-img-top" alt="Maggiolino Bianco">
                         <div class="card-body text-center">
-                            <h4 class="car-title">Alfa Romeo Spider</h4>
-                            <p class="car-year">1966</p>
-                            <p class="card-text">L'elegante roadster italiana che ha fatto sognare generazioni.</p>
+                            <h4 class="car-title">Maggiolino Bianco</h4>
+                            <p class="car-year">1975</p>
+                            <p class="card-text">Il Maggiolino Bianco è una vera icona del design automobilistico degli
+                                anni '70. Con la sua forma rotonda, le linee semplici ma eleganti e il motore che ha
+                                fatto storia, il Maggiolino ha conquistato il cuore di milioni di persone in tutto il
+                                mondo. Questo esemplare del 1975 è stato restaurato con cura per mantenere intatto il
+                                fascino vintage, offrendo un'esperienza di guida unica e nostalgica. Perfetto per un
+                                matrimonio, un evento speciale o semplicemente per vivere un pezzo di storia su quattro
+                                ruote.</p>
                             <a href="#prenota" class="btn btn-custom"
-                                onclick="selectCar('Alfa Romeo Spider')">Prenota</a>
+                                onclick="selectCar('Maggiolino Bianco')">Prenota</a>
                         </div>
                     </div>
                 </div>
@@ -201,68 +211,22 @@
                 <!-- Car 2 -->
                 <div class="col-md-4">
                     <div class="card car-card">
-                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Fiat 500">
+                        <img src="AutoMatrimoni/img/IMG20220604203505.jpg" class="card-img-top" alt="Maggiolino Nero">
                         <div class="card-body text-center">
-                            <h4 class="car-title">Fiat 500</h4>
-                            <p class="car-year">1957</p>
-                            <p class="card-text">La piccola grande icona italiana che ha motorizzato l'Italia.</p>
-                            <a href="#prenota" class="btn btn-custom" onclick="selectCar('Fiat 500')">Prenota</a>
+                            <h4 class="car-title">Maggiolino Nero</h4>
+                            <p class="car-year">1971</p>
+                            <p class="card-text">Il Maggiolino Nero del 1971 è una delle versioni più amate di questa
+                                leggendaria vettura che ha segnato un'epoca. Con il suo motore robusto e il design
+                                inconfondibile, è stato protagonista della motorizzazione di milioni di italiani e di
+                                tanti momenti speciali. Questo esemplare è stato restaurato per mantenere intatto il suo
+                                fascino vintage, perfetto per chi cerca un'esperienza di guida romantica e senza tempo.
+                                Un'auto elegante e storica, ideale per aggiungere un tocco di classe al tuo matrimonio o
+                                evento esclusivo.</p>
+                            <a href="#prenota" class="btn btn-custom" onclick="selectCar('Maggiolino Nero')">Prenota</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Car 3 -->
-                <div class="col-md-4">
-                    <div class="card car-card">
-                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Lancia Fulvia Coupé">
-                        <div class="card-body text-center">
-                            <h4 class="car-title">Lancia Fulvia Coupé</h4>
-                            <p class="car-year">1965</p>
-                            <p class="card-text">Eleganza sportiva e prestazioni da rally in un unico pacchetto.</p>
-                            <a href="#prenota" class="btn btn-custom"
-                                onclick="selectCar('Lancia Fulvia Coupé')">Prenota</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car 4 -->
-                <div class="col-md-4">
-                    <div class="card car-card">
-                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Jaguar E-Type">
-                        <div class="card-body text-center">
-                            <h4 class="car-title">Jaguar E-Type</h4>
-                            <p class="car-year">1961</p>
-                            <p class="card-text">Definita da Enzo Ferrari "l'auto più bella mai costruita".</p>
-                            <a href="#prenota" class="btn btn-custom" onclick="selectCar('Jaguar E-Type')">Prenota</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car 5 -->
-                <div class="col-md-4">
-                    <div class="card car-card">
-                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Mercedes 300SL">
-                        <div class="card-body text-center">
-                            <h4 class="car-title">Mercedes 300SL</h4>
-                            <p class="car-year">1954</p>
-                            <p class="card-text">L'iconica "Ali di gabbiano", simbolo di lusso e ingegneria tedesca.</p>
-                            <a href="#prenota" class="btn btn-custom" onclick="selectCar('Mercedes 300SL')">Prenota</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car 6 -->
-                <div class="col-md-4">
-                    <div class="card car-card">
-                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Ferrari 250 GT">
-                        <div class="card-body text-center">
-                            <h4 class="car-title">Ferrari 250 GT</h4>
-                            <p class="car-year">1960</p>
-                            <p class="card-text">Il cavallino rampante nella sua forma più pura ed elegante.</p>
-                            <a href="#prenota" class="btn btn-custom" onclick="selectCar('Ferrari 250 GT')">Prenota</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -295,12 +259,9 @@
                                 <label for="auto" class="form-label">Scegli un'Auto</label>
                                 <select class="form-select" id="auto" required>
                                     <option value="">Seleziona un'auto</option>
-                                    <option value="Alfa Romeo Spider">Alfa Romeo Spider (1966)</option>
-                                    <option value="Fiat 500">Fiat 500 (1957)</option>
-                                    <option value="Lancia Fulvia Coupé">Lancia Fulvia Coupé (1965)</option>
-                                    <option value="Jaguar E-Type">Jaguar E-Type (1961)</option>
-                                    <option value="Mercedes 300SL">Mercedes 300SL (1954)</option>
-                                    <option value="Ferrari 250 GT">Ferrari 250 GT (1960)</option>
+                                    <option value="Maggiolino Bianco">Maggiolino Bianco(1975)</option>
+                                    <option value="Maggiolino Nero">Maggiolino Nero (1971)</option>
+
                                 </select>
                             </div>
 
@@ -346,7 +307,7 @@
                             <div class="d-flex flex-column align-items-center">
                                 <i class="fas fa-phone fa-3x mb-3" style="color: var(--primary-color);"></i>
                                 <h5>Telefono</h5>
-                                <p>+39 02 1234567</p>
+                                <p>+39 3332831013</p>
                             </div>
                         </div>
 
@@ -354,7 +315,7 @@
                             <div class="d-flex flex-column align-items-center">
                                 <i class="fas fa-envelope fa-3x mb-3" style="color: var(--primary-color);"></i>
                                 <h5>Email</h5>
-                                <p>info@vintagewheels.it</p>
+                                <p>giordano.dottori@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -424,24 +385,24 @@
             const messaggio = document.getElementById('messaggio').value;
 
             // Create the message for WhatsApp
-            let whatsappMessage = * Nuova Prenotazione Auto d'Epoca*%0A%0A;
-            whatsappMessage += * Nome:* ${ nome } ${ cognome }% 0A;
-            whatsappMessage += * Telefono:* ${ telefono }% 0A;
-            whatsappMessage += * Auto:* ${ auto }% 0A;
-            whatsappMessage += * Data:* ${ data }% 0A;
+            let whatsappMessage = `*Nuova Prenotazione Auto d'Epoca*%0A%0A`;
+            whatsappMessage += `*Nome:* ${nome} ${cognome}%0A`;
+            whatsappMessage += `*Telefono:* ${telefono}%0A`;
+            whatsappMessage += `*Auto:* ${auto}%0A`;
+            whatsappMessage += `*Data:* ${data}%0A`;
 
             if (messaggio) {
-                whatsappMessage += * Messaggio:* ${ messaggio }% 0A;
+                whatsappMessage += `*Messaggio:* ${messaggio}%0A`;
             }
 
             // Replace with your WhatsApp number
-            const whatsappNumber = '391234567890'; // Format: country code + number without +
+            const whatsappNumber = '393332831013'; // Format: country code + number without +
 
             // Create WhatsApp URL
-            const whatsappUrl = https://wa.me/${whatsappNumber}?text=${whatsappMessage};
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-                // Open WhatsApp in a new tab
-                window.open(whatsappUrl, '_blank');
+            // Open WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
 
             // Reset form after submission
             document.getElementById('bookingForm').reset();
