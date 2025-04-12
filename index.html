@@ -8,11 +8,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-         :root {
-            --primary-color: #ff0000c8; /* Rosa pastello, delicato e elegante */
-            --accent-color: #ea8599; /* Rosa chiaro, accento romantico */
-            --dark-color: #3e3e3e; /* Grigio scuro per il testo */
-            --light-color: #fdf7f4; /* Bianco caldo, fresco e accogliente */
+        :root {
+            --primary-color: #ff0000c8;
+            /* Rosa pastello, delicato e elegante */
+            --accent-color: #ea8599;
+            /* Rosa chiaro, accento romantico */
+            --dark-color: #3e3e3e;
+            /* Grigio scuro per il testo */
+            --light-color: #fdf7f4;
+            /* Bianco caldo, fresco e accogliente */
         }
 
         body {
@@ -129,6 +133,14 @@
             color: white;
         }
 
+        .carousel-inner img {
+            max-height: 400px;
+            /* Imposta l'altezza massima dell'immagine */
+            object-fit: cover;
+            /* Fa sì che le immagini si adattino senza distorsioni */
+        }
+
+
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -187,7 +199,32 @@
                 <!-- Car 1 -->
                 <div class="col-md-4">
                     <div class="card car-card">
-                        <img src="img/20240629_172556.jpg" class="card-img-top" alt="Maggiolino Bianco">
+                        <!-- Carosello delle immagini -->
+                        <div id="maggiolinoBiancoCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/20240629_172556.jpg" class="d-block w-100" alt="Maggiolino Bianco">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/maggiolino2.jpg" class="d-block w-100" alt="Maggiolino Bianco 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/maggiolino3.jpg" class="d-block w-100" alt="Maggiolino Bianco 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#maggiolinoBiancoCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#maggiolinoBiancoCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- End Carosello -->
+
                         <div class="card-body text-center">
                             <h4 class="car-title">Maggiolino Bianco</h4>
                             <p class="car-year">1975</p>
@@ -203,27 +240,92 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Car 2 -->
-                <div class="col-md-4">
-                    <div class="card car-card">
-                        <img src="img/IMG20220604203505.jpg" class="card-img-top" alt="Maggiolino Nero">
-                        <div class="card-body text-center">
-                            <h4 class="car-title">Maggiolino Nero</h4>
-                            <p class="car-year">1971</p>
-                            <p class="card-text">Il Maggiolino Nero del 1971 è una delle versioni più amate di questa
-                                leggendaria vettura che ha segnato un'epoca. Con il suo motore robusto e il design
-                                inconfondibile, è stato protagonista della motorizzazione di milioni di italiani e di
-                                tanti momenti speciali. Questo esemplare è stato restaurato per mantenere intatto il suo
-                                fascino vintage, perfetto per chi cerca un'esperienza di guida romantica e senza tempo.
-                                Un'auto elegante e storica, ideale per aggiungere un tocco di classe al tuo matrimonio o
-                                evento esclusivo.</p>
-                            <a href="#prenota" class="btn btn-custom" onclick="selectCar('Maggiolino Nero')">Prenota</a>
+            <!-- Car 2 -->
+            <div class="col-md-4">
+                <div class="card car-card">
+                    <!-- Carosello delle immagini per il Maggiolino Nero -->
+                    <div id="maggiolinoNeroCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/IMG20220604203505.jpg" class="d-block w-100" alt="Maggiolino Nero">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/maggiolinoNero2.jpg" class="d-block w-100" alt="Maggiolino Nero 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/maggiolinoNero3.jpg" class="d-block w-100" alt="Maggiolino Nero 3">
+                            </div>
                         </div>
+                        <!-- Controlli del carosello -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#maggiolinoNeroCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#maggiolinoNeroCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!-- Fine Carosello -->
+
+                    <div class="card-body text-center">
+                        <h4 class="car-title">Maggiolino Nero</h4>
+                        <p class="car-year">1971</p>
+                        <p class="card-text">Il Maggiolino Nero del 1971 è una delle versioni più amate di questa
+                            leggendaria vettura che ha segnato un'epoca. Con il suo motore robusto e il design
+                            inconfondibile, è stato protagonista della motorizzazione di milioni di italiani e di tanti
+                            momenti speciali. Questo esemplare è stato restaurato per mantenere intatto il suo fascino
+                            vintage, perfetto per chi cerca un'esperienza di guida romantica e senza tempo. Un'auto
+                            elegante e storica, ideale per aggiungere un tocco di classe al tuo matrimonio o evento
+                            esclusivo.</p>
+                        <a href="#prenota" class="btn btn-custom" onclick="selectCar('Maggiolino Nero')">Prenota</a>
                     </div>
                 </div>
-
             </div>
+        </div>
+        <!-- Car 3-->
+        <div class="col-md-4">
+            <div class="card car-card">
+                <!-- Carosello delle immagini per il Pulmino -->
+                <div id="maggiolinoNeroCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/pulmino.jpg" class="d-block w-100" alt="pulmino Nero">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/maggiolinoNero2.jpg" class="d-block w-100" alt="Maggiolino Nero 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/maggiolinoNero3.jpg" class="d-block w-100" alt="Maggiolino Nero 3">
+                        </div>
+                    </div>
+                    <!-- Controlli del carosello -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#maggiolinoNeroCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#maggiolinoNeroCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- Fine Carosello -->
+
+                <div class="card-body text-center">
+                    <h4 class="car-title">Fiat Talento</h4>
+                    <p class="card-text">Pulmino 8 posti comodo per addio al celibato, nubilita oppure accompagnare gli
+                        invitati alla propria festa di matrimonio.</p>
+                    <a href="#prenota" class="btn btn-custom" onclick="selectCar('Pulmino')">Prenota</a>
+                </div>
+            </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -257,7 +359,7 @@
                                     <option value="">Seleziona un'auto</option>
                                     <option value="Maggiolino Bianco">Maggiolino Bianco(1975)</option>
                                     <option value="Maggiolino Nero">Maggiolino Nero (1971)</option>
-
+                                    <option value="Pulmino">Pulmino 8 Posti</option>
                                 </select>
                             </div>
 
@@ -325,7 +427,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <h4 class="mb-4">Vintage Wheels</h4>
+                    <h4 class="mb-4">Auto per matrimoni</h4>
                     <p>Specializzati nel noleggio di auto d'epoca restaurate con cura e mantenute in perfette condizioni
                         per offrire un'esperienza di guida indimenticabile.</p>
                 </div>
@@ -344,9 +446,10 @@
                 <div class="col-md-3">
                     <h5 class="mb-4">Seguici</h5>
                     <div>
-                        <a href="#" class="social-icons"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icons"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icons"><i class="fab fa-twitter"></i></a>
+                        <a href="#https://www.facebook.com/jarad.dottori" class="social-icons"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#https://www.instagram.com/maggiolino_wedding/" class="social-icons"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -354,7 +457,7 @@
             <hr class="mt-4 mb-4" style="background-color: var(--accent-color);">
 
             <div class="text-center">
-                <p class="mb-0">&copy; 2025 Vintage Wheels. Tutti i diritti riservati.</p>
+                <p class="mb-0">&copy; 2025 Auto per matrimoni. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>
