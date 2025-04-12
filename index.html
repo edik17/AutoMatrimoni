@@ -519,3 +519,48 @@
 </body>
 
 </html>
+<script>
+    // Funzione per selezionare l'auto
+    function selectCar(carName) {
+        document.getElementById('auto').value = carName;
+    }
+
+    // Funzione per inviare il modulo di prenotazione su WhatsApp
+    document.getElementById('bookingForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Ottieni i dati del modulo
+        const nome = document.getElementById('nome').value;
+        const cognome = document.getElementById('cognome').value;
+        const telefono = document.getElementById('telefono').value;
+        const auto = document.getElementById('auto').value;
+        const data = document.getElementById('data').value;
+        const messaggio = document.getElementById('messaggio').value;
+
+        // Crea il messaggio per WhatsApp
+        let whatsappMessage = `*Nuova Prenotazione Auto d'Epoca*%0A%0A`;
+        whatsappMessage += `*Nome:* ${nome} ${cognome}%0A`;
+        whatsappMessage += `*Telefono:* ${telefono}%0A`;
+        whatsappMessage += `*Auto:* ${auto}%0A`;
+        whatsappMessage += `*Data:* ${data}%0A`;
+
+        if (messaggio) {
+            whatsappMessage += `*Messaggio:* ${messaggio}%0A`;
+        }
+
+        // Sostituisci con il tuo numero WhatsApp
+        const whatsappNumber = '3332831013'; // Inserisci il tuo numero WhatsApp senza + (es. 39 per l'Italia)
+
+        // Crea l'URL di WhatsApp
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+        // Apri WhatsApp con il messaggio precompilato
+        window.open(whatsappUrl, '_blank');
+
+        // Reset del modulo
+        this.reset();
+
+        // Messaggio di conferma
+        alert('Grazie per la tua prenotazione! Sarai reindirizzato a WhatsApp per inviarci il messaggio.');
+    });
+</script>
